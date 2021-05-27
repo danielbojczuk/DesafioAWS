@@ -31,7 +31,7 @@ A API que você irá construir deverá receber o arquivo e armazená-lo.
 
 Após armazenar o documento, sua aplicação deverá postar um evento ou uma mensagem com a confirmação da gravação, pode se utilizar serviços como Kafka ou SQS por exemplo, o bankline será consumidor.
 
-####Regras
+#### Regras
 * A aplicação deve ser desenhada e construída na cloud publica (AWS, Azure ou Google Cloud).
 * Utilize .net core#(preferencialmente) ou Java.
 * A infraestrutura da AWS deve ser criada como código com CloudFormation ou Terraform por exemplo.
