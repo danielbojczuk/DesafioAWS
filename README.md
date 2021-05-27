@@ -24,15 +24,15 @@ Um cliente tem no bankline a possibilidade de enviar seus documentos para contra
 2. Acionará a API de gravação do arquivo (API que você deve desenhar e construir)
 3. Confirmará o registro dos dados
 
-O seu escopo se limita a disponibilizar uma API para ser acionada pelo Bankline e disponibilizar o retorno desta gravação, sendo que esta comunicação ocorrerá de forma assíncrona. O envio do arquivo e a leitura do retorno pelo bankline são responsabilidades de outra squad. O Bankline está hospedado em uma infraestrutura on-premise tendo de se integrar com sua aplicação na cloud pública.
+O seu escopo se limita a disponibilizar uma API para ser acionada pelo Bankline e disponibilizar o retorno desta gravação, sendo que esta comunicação ocorrerá de forma assíncrona. O envio do arquivo e a leitura do retorno pelo bankline são responsabilidades de outra squad. O Bankline está hospedado em uma infraestrutura on-premise, tendo de se integrar com sua aplicação na cloud pública.
 ![Diagrama](diagrama.png)
 
 A API que você irá construir deverá receber o arquivo e armazená-lo.
 
-Após armazenar o documento, sua aplicação deverá postar um evento ou uma mensagem com a confirmação da gravação, pode se utilizar serviços como Kafka ou SQS por exemplo, o bankline será consumidor.
+Após armazenar o documento, sua aplicação deverá postar um evento ou uma mensagem com a confirmação da gravação. Pode-se utilizar serviços como Kafka ou SQS, por exemplo. O bankline será um consumidor.
 
 #### Regras
-* A aplicação deve ser desenhada e construída na cloud publica (AWS, Azure ou Google Cloud).
-* Utilize .net core#(preferencialmente) ou Java.
-* A infraestrutura da AWS deve ser criada como código com CloudFormation ou Terraform por exemplo.
-* Você pode usar os serviços da cloud publica que entender serem os mais apropriados à solução, levando em consideração custo, disponibilidade, escalabilidade e desacoplamento.
+* A aplicação deve ser desenhada e construída na cloud pública (AWS, Azure ou Google Cloud).
+* Utilize .net core# (preferencialmente) ou Java.
+* A infraestrutura em Cloud Pública deve ser criada como código. Exemplo: CloudFormation ou Terraform.
+* Você pode usar os serviços da Cloud Pública que entender serem os mais apropriados à solução, levando em consideração custo, disponibilidade, escalabilidade e desacoplamento.
