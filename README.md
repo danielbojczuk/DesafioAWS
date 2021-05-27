@@ -33,6 +33,6 @@ Após armazenar o documento, sua aplicação deverá postar um evento ou uma men
 
 #### Regras
 * A aplicação deve ser desenhada e construída na cloud pública (AWS, Azure ou Google Cloud).
-* Utilize .net core# (preferencialmente) ou Java.
+* Utilize .net core (preferencialmente) ou Java.
 * A infraestrutura em Cloud Pública deve ser criada como código. Exemplo: CloudFormation ou Terraform.
 * Você pode usar os serviços da Cloud Pública que entender serem os mais apropriados à solução, levando em consideração custo, disponibilidade, escalabilidade e desacoplamento.
