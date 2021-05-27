@@ -19,7 +19,7 @@ A área de negócio verificou na conciliação que algumas operações não est�
 ### Teste 2 - Solução de Envio e Gravação de PDF
 Precisamos que você elabore e construa um desenho de solução para envio e gravação de um arquivo PDF que representa um contrato assinado por um cliente conforme abaixo:
 
-Um cliente tem no bankline a possibilidade de enviar seus documentos para contratação de um produto do banco, ele preenche seus dados no portal e anexa os documentos no formato PDF. Ao salvar o bankline:
+Um cliente tem no bankline a possibilidade de enviar seus documentos para contratação de um produto do banco, ele preenche seus dados no portal e anexa os documentos no formato PDF. Ao salvar, o bankline:
 1. Gravará os dados do cliente
 2. Acionará a API de gravação do arquivo (API que você deve desenhar e construir)
 3. Confirmará o registro dos dados
