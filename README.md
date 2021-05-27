@@ -16,13 +16,23 @@ Cada operação deverá obrigatoriamente gerar uma posição caso o contrato est
 A área de negócio verificou na conciliação que algumas operações não estão gerando posição. Você precisa entender o que está acontecendo e corrigir o mais rápido possível, pois além das outras áreas estamos afetando os clientes. Conseguimos preparar uma massa de testes onde aparentemente o erro está acontecendo.
 
 
-### Teste 2 - API de Feriados
-Precisamos que você elabore um desenho de solução para envio e gravação de um arquivo PDF que representa um contrato assinado por um cliente e realize seu desenvolvimento conforme abaixo:
+### Teste 2 - Solução de Envio e Gravação de PDF
+Precisamos que você elabore e construa um desenho de solução para envio e gravação de um arquivo PDF que representa um contrato assinado por um cliente conforme abaixo:
 
 Um cliente tem no bankline a possibilidade de enviar seus documentos para contratação de um produto do banco, ele preenche seus dados no portal e anexa os documentos no formato PDF, ao salvar o bankline:
 1. Gravará os dados do cliente
 2. Acionará a API de gravação do arquivo (API que você deve desenhar e construir)
 3. Confirmará o registro dos dados
 
-O seu escopo se limita a disponibilizar uma API para ser acionada pelo Bankline e disponibilizar o retorno desta gravação, sendo que esta comunicação ocorrerá de forma assíncrona, o envio do arquivo e a leitura do retorno pelo bankline são responsabilidade de outra squad. O Bankline está hospedado em uma infraestrutura on-premise tendo de se integrar com sua aplicação na cloud pública.
+O seu escopo se limita a disponibilizar uma API para ser acionada pelo Bankline e disponibilizar o retorno desta gravação, sendo que esta comunicação ocorrerá de forma assíncrona. O envio do arquivo e a leitura do retorno pelo bankline são responsabilidades de outra squad. O Bankline está hospedado em uma infraestrutura on-premise tendo de se integrar com sua aplicação na cloud pública.
 ![Diagrama](diagrama.png)
+
+A API que você irá construir deverá receber o arquivo e armazená-lo.
+
+Após armazenar o documento, sua aplicação deverá postar um evento ou uma mensagem com a confirmação da gravação, pode se utilizar serviços como Kafka ou SQS por exemplo, o bankline será consumidor.
+
+####Regras
+* A aplicação deve ser desenhada e construída na cloud publica (AWS, Azure ou Google Cloud).
+* Utilize .net core#(preferencialmente) ou Java.
+* A infraestrutura da AWS deve ser criada como código com CloudFormation ou Terraform por exemplo.
+* Você pode usar os serviços da cloud publica que entender serem os mais apropriados à solução, levando em consideração custo, disponibilidade, escalabilidade e desacoplamento.
